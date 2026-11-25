@@ -16,3 +16,9 @@ profile = "black"
 
 [tool.pyright]
 typeCheckingMode = "strict"
+
+[tool.pytest.ini_options]
+# Ensure the in-repo package is importable when pytest is run from the
+# repository root (or any subdirectory) without an editable install.
+pythonpath = ["."]
+
